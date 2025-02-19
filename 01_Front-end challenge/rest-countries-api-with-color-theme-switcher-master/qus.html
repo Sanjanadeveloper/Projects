@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+</html>
+<script>
+    class CreateData{
+        constructor(title, author, yearPublishes){
+            this.title = title;
+            this.author = author;
+            this.yearPublishes = yearPublishes;
+            
+            isOld(){
+                let currentYear = new Date().getFullYear();
+                return currentYear - this.yearPublishes > 10;
+            };
+        }
+    }
+    let result = new CreateData("book", "sanjana", 2011)
+    console.log(result.isOld());
+</script>
